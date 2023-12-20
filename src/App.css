@@ -25,12 +25,12 @@ body{
   border: none;
 }
 .mimmo.selected {
-  border: 3px solid red;
+  border: 3px solid green;
 }
 .mimmo:hover{
   transition: transform 0.3s ease;
   transform: scale(0.98);
-  border: 3px solid red;
+  border: 3px solid green;
 
 }
 .mimmo:not(:hover) {
