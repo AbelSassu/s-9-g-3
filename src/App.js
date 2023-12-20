@@ -4,7 +4,7 @@ import MyNavbar from "./components/MyNavbar";
 import MyHero from "./components/MyHeros";
 import BookList1 from "./components/BookList";
 import MyFooter from "./components/MyFooters";
-import books from "./data/books.json"
+
 
 function App() {
     return (

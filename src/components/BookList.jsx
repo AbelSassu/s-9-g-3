@@ -7,6 +7,11 @@ class BookList1 extends React.Component {
     state = { search: "" };
 
     render() {
+        const { search } = this.state;
+        const filteredBooks = books.horror.filter((book) =>
+            book.title.toLowerCase().includes(search.toLowerCase())
+        );
+
         return (
             <Container>
                 <Row>
@@ -16,10 +21,10 @@ class BookList1 extends React.Component {
                                 Il peso della cultura...
                             </Form.Label>
                             <Form.Control
-                                className="search"
+                                className="search1"
                                 type="text"
                                 placeholder="Cerca la tua arma qui!"
-                                value={this.state.search}
+                                value={search}
                                 onChange={(e) =>
                                     this.setState({
                                         search: e.target.value,
@@ -30,9 +35,9 @@ class BookList1 extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    {books.fantasy.map((book) => {
-                        return <SingleBook1 b={book} key={book.id} />;
-                    })}
+                    {filteredBooks.map((book) => (
+                        <SingleBook1 b={book} key={book.id} />
+                    ))}
                 </Row>
             </Container>
         );
