@@ -20,11 +20,23 @@ body{
 .prova{
   height: 100%;
 }
-
+.mimmo {
+  transition: transform 0.3s ease;
+  border: none;
+}
 .mimmo.selected {
   border: 3px solid red;
 }
+.mimmo:hover{
+  transition: transform 0.3s ease;
+  transform: scale(0.98);
+  border: 3px solid red;
 
+}
+.mimmo:not(:hover) {
+  transform: scale(1);
+
+}
 .prova {
   transition: transform 0.3s ease;
 }
